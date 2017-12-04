@@ -1,0 +1,81 @@
+body{
+    background-image: url("Backgroundimage.jpg");
+     background-repeat: no-repeat;
+    background-size: cover;
+  font-family: 'Open Sans', 'sans-serif';
+}
+
+#login {
+  background-color: #eee;
+  opacity: .9;
+  height: 280px;
+  width: 400px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 150px;
+ padding-bottom: 10px;
+ // padding: 0;
+  text-align: center;
+}
+#Registration {
+  background-color: #eee;
+  opacity: .9;
+  height: auto;
+  width: 400px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 70px;
+ padding-bottom: 10px;
+ // padding: 0;
+  text-align: center;
+}
+#header{
+    color: black;
+}
+h1{
+  font-size: 32px;
+  padding: 10px;
+  margin: 0;
+  color: #fff;
+  background-color:aliceblue;
+  margin-bottom: 15px;
+}
+.control{
+ width: 80%;
+margin-top: 20px;
+padding: 5px;
+font-family: 'Open Sans', 'sans-serif';
+border-radius: 5px;
+}
+.buttoncontrol{
+    margin-top: 30px;
+    padding: 3px;
+    width: 100px;
+    height: 40px;
+    font-family: 'Open Sans', 'sans-serif';
+    border-radius: 5px;
+    background-color:beige;
+}
+#proflogo{
+    position: absolute;
+    top: 3%;
+    left: 95%;
+}
+#proflogo .logo{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    
+    
+}
+#proflogo .logo img{
+    height: 30px;
+    width: 30px;
+    
+}
+#clk_update{
+            border: 1px solid black;
+            padding: 5px 10px;
+            cursor: pointer;
+        }

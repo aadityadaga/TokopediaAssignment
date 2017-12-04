@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Registration page</title>
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    <script>
+        function on(){
+            var firstname= cookieread("fname");
+            var lastname= cookieread("lname");
+            var email= cookieread("email");
+            var dob= cookieread("dob");
+            document.getElementById("firstname").value=firstname;
+            document.getElementById("lastname").value=lastname;
+            document.getElementById("email").value=email;
+            document.getElementById("dob").value=dob;
+        }
+        function cookieread(datafetch){
+            var retrivename = datafetch+ "=";
+            var ca =document.cookie.split(';');
+            for(var i=0;i<ca.length;i++)
+                {
+                    var c= ca[i];
+                    while(c.charAt(0)==' ')
+                        c=c.substring(1);
+                      if(c.indexOf(datafetch)==0){
+//                          alert(c)
+                          return c.substring(datafetch.length+1,c.length);
+                      }
+                }
+            return null;
+        }
+
+        function editfunc(){                        
+            document.getElementById("firstname").removeAttribute('disabled');                        
+            document.getElementById("lastname").removeAttribute('disabled');
+            document.getElementById("dob").removeAttribute('disabled');           
+        }        
+        
+        function enablefunc(){                        
+            document.getElementById("firstname").removeAttribute('disabled');                        
+            document.getElementById("lastname").removeAttribute('disabled');
+            document.getElementById("dob").removeAttribute('disabled');  
+            document.getElementById("email").removeAttribute('disabled');
+        }        
+    </script>
+
+</head>
+    <body  onload="on()">
+        <div id="proflogo">
+        <div class="logo">
+            <img src="static/css/user.png">   </div>
+        </div>
+  <div id="Registration">
+  <h1 id="header">Profile</h1>
+  
+  <form method="POST" action="updateinsert" onsubmit="enablefunc()">
+      
+    <label id="clk_update" onclick="editfunc()">&#9998;</label>
+      <br>
+    <input type="text" class="control" placeholder="First Name" name="First_Name" id="firstname" disabled>
+    
+<!--      <input type="button"  style="font-size:15px" onclick="editfunc()" value="&#9998;"><br>-->
+    <input type="text" class="control" placeholder="Last Name" name="Last_Name" id="lastname" disabled>
+<!--    <input type="button" style="font-size:15px" onclick="editfunc()" value="&#9998;"><br>-->
+    <input type="Email" class="control" placeholder="Email" name="Email" id="email" disabled>
+<!--    <input type="button" style="font-size:15px" onclick="editfunc()" value="&#9998;"><br>-->
+    <input type="date" class="control"  name="DOB" id="dob" disabled>
+      
+      
+<!--    <input type="button" style="font-size:15px" onclick="editfunc()" value="&#9998;"> <br>-->
+    <input type="submit" class="buttoncontrol" value="Submit">
+    <input type="reset" class="buttoncontrol" value="reset"> 
+    </form>  
+      <form method="Post" action="logout">
+    <input type="submit" class="buttoncontrol" value="logout"  >  
+  </form>
+</div>
+</body>
+</html>
